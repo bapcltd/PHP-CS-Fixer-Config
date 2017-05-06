@@ -1,5 +1,8 @@
 # SignpostMarv's PHP-CS-Fixer config
 
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/SignpostMarv/PHP-CS-Fixer-Config/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/SignpostMarv/PHP-CS-Fixer-Config/?branch=master)
+[![Build Status](https://scrutinizer-ci.com/g/SignpostMarv/psalm/badges/build.png?b=master)](https://scrutinizer-ci.com/g/SignpostMarv/psalm/build-status/master)
+
 There's two different versions, one for general use & one for use on projects
 that use [phpstan](https://github.com/phpstan/phpstan) for static analysis
 
