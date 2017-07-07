@@ -118,10 +118,7 @@ class Config extends BaseConfig
     {
         return new static(
             array_filter(
-                array_filter(
                     $dirs,
-                    'is_string'
-                ),
                 'is_dir'
             )
         );
