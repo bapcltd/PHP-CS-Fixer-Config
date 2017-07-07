@@ -104,6 +104,10 @@ class Config extends BaseConfig
                     DefaultFinder $finder,
                     string $directory
                 ) : DefaultFinder {
+                    if (is_file($directory) === true) {
+                        return $finder->append([$directory]);
+                    }
+
                     return $finder->in($directory);
                 }
             ),
@@ -122,6 +126,18 @@ class Config extends BaseConfig
                 'is_dir'
             )
         );
+    }
+
+    public static function createWithPaths(string ...$pathsIn) : self
+    {
+        $paths = [];
+        foreach ($pathsIn as $path) {
+            if (is_dir($path) || is_file($path)) {
+                $paths[] = $path;
+            }
+        }
+
+        return new static($paths);
     }
 
     /**
