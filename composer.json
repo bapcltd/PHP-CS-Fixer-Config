@@ -20,10 +20,9 @@
     "scripts": {
         "tests": [
             "composer install",
-            "php ./vendor/friendsofphp/php-cs-fixer/php-cs-fixer fix --verbose --allow-risky=yes --dry-run .php_cs.dist",
             "php ./vendor/friendsofphp/php-cs-fixer/php-cs-fixer fix --verbose --allow-risky=yes --dry-run",
-            "php ./vendor/phpstan/phpstan/bin/phpstan analyse -l5 src",
-            "php ./vendor/vimeo/psalm/bin/psalm src"
+            "php ./vendor/phpstan/phpstan/bin/phpstan analyse -l5 .php_cs.dist src",
+            "php ./vendor/vimeo/psalm/bin/psalm"
         ]
     },
     "require": {

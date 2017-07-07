@@ -6,6 +6,7 @@
     totallyTyped="false"
 >
     <projectFiles>
+        <file name=".php_cs.dist" />
         <directory name="src" />
     </projectFiles>
 

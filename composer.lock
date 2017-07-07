@@ -1976,7 +1976,7 @@
                 "MIT"
             ],
             "description": "PHPStan - PHP Static Analysis Tool",
-            "time": "2017-07-05T20:37:31+00:00"
+            "time": "2017-07-05 20:37:31"
         },
         {
             "name": "seld/cli-prompt",
@@ -2167,7 +2167,7 @@
                 "inspection",
                 "php"
             ],
-            "time": "2017-06-30T18:16:27+00:00"
+            "time": "2017-06-30 18:16:27"
         }
     ],
     "aliases": [],
