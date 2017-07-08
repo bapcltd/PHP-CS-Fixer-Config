@@ -15,7 +15,8 @@ that use [phpstan](https://github.com/phpstan/phpstan) for static analysis
 ### General Use
 
 ```php
-return \SignpostMarv\CS\Config::createWithDirs(
+return \SignpostMarv\CS\Config::createWithPaths(
+    __FILE__,
     (__DIR__ . DIRECTORY_SEPARATOR . 'src' . DIRECTORY_SEPARATOR),
     (__DIR__ . DIRECTORY_SEPARATOR . 'tests' . DIRECTORY_SEPARATOR)
 )
@@ -24,7 +25,8 @@ return \SignpostMarv\CS\Config::createWithDirs(
 ### With PHPStan
 
 ```php
-return \SignpostMarv\CS\ConfigUsedWithPhpstan::createWithDirs(
+return \SignpostMarv\CS\ConfigUsedWithPhpstan::createWithPaths(
+    __FILE__,
     (__DIR__ . DIRECTORY_SEPARATOR . 'src' . DIRECTORY_SEPARATOR),
     (__DIR__ . DIRECTORY_SEPARATOR . 'tests' . DIRECTORY_SEPARATOR)
 )
