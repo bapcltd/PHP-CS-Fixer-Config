@@ -22,10 +22,30 @@ return \SignpostMarv\CS\Config::createWithPaths(
 )
 ```
 
+#### Use without PHP 7.1 Nullable return types
+
+```php
+return \SignpostMarv\CS\ConfigUsedWithoutNullableReturn::createWithPaths(
+    __FILE__,
+    (__DIR__ . DIRECTORY_SEPARATOR . 'src' . DIRECTORY_SEPARATOR),
+    (__DIR__ . DIRECTORY_SEPARATOR . 'tests' . DIRECTORY_SEPARATOR)
+)
+```
+
 ### With PHPStan
 
 ```php
 return \SignpostMarv\CS\ConfigUsedWithPhpstan::createWithPaths(
+    __FILE__,
+    (__DIR__ . DIRECTORY_SEPARATOR . 'src' . DIRECTORY_SEPARATOR),
+    (__DIR__ . DIRECTORY_SEPARATOR . 'tests' . DIRECTORY_SEPARATOR)
+)
+```
+
+#### Use without PHP 7.1 Nullable return types
+
+```php
+return \SignpostMarv\CS\ConfigUsedWithPhpstanWithoutNullableReturn::createWithPaths(
     __FILE__,
     (__DIR__ . DIRECTORY_SEPARATOR . 'src' . DIRECTORY_SEPARATOR),
     (__DIR__ . DIRECTORY_SEPARATOR . 'tests' . DIRECTORY_SEPARATOR)
