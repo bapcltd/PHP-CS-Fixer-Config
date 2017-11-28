@@ -15,6 +15,7 @@ class Config extends BaseConfig
 {
     const DEFAULT_RULES = [
         '@Symfony' => true,
+        'align_multiline_comment' => false,
         'array_syntax' => [
             'syntax' => 'short',
         ],
