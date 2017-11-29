@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "a656fa98b835be0cfd085c20a5cf3415",
+    "content-hash": "bb762b839d5b15fa69baee2ed83f6ce9",
     "packages": [
         {
             "name": "composer/semver",
@@ -2039,16 +2039,16 @@
         },
         {
             "name": "phpstan/phpstan",
-            "version": "dev-master",
+            "version": "0.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "1457cb9da382238bee55e467a8066e53cf1df031"
+                "reference": "f8cccde009c856e42704b7e4c250d5c73c60d00d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/1457cb9da382238bee55e467a8066e53cf1df031",
-                "reference": "1457cb9da382238bee55e467a8066e53cf1df031",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/f8cccde009c856e42704b7e4c250d5c73c60d00d",
+                "reference": "f8cccde009c856e42704b7e4c250d5c73c60d00d",
                 "shasum": ""
             },
             "require": {
@@ -2095,7 +2095,7 @@
                 "MIT"
             ],
             "description": "PHPStan - PHP Static Analysis Tool",
-            "time": "2017-11-29T14:11:28+00:00"
+            "time": "2017-11-29T11:25:41+00:00"
         },
         {
             "name": "seld/cli-prompt",
@@ -2294,7 +2294,6 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "phpstan/phpstan": 20,
         "vimeo/psalm": 20
     },
     "prefer-stable": false,
