@@ -105,7 +105,7 @@ class Config extends BaseConfig
                     DefaultFinder $finder,
                     string $directory
                 ) : DefaultFinder {
-                    if (is_file($directory) === true) {
+                    if (true === is_file($directory)) {
                         return $finder->append([$directory]);
                     }
 
