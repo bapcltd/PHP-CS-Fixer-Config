@@ -27,7 +27,7 @@
     },
     "require": {
         "php": "^7.0",
-        "friendsofphp/php-cs-fixer": "^2.3"
+        "friendsofphp/php-cs-fixer": "^2.8"
     },
     "require-dev": {
         "phpstan/phpstan": "dev-master",
