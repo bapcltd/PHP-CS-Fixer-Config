@@ -104,19 +104,19 @@ class Config extends BaseConfig
 
         foreach (
             array_reduce(
-            $inDirs,
-            (
-                function (
-                    DefaultFinder $finder,
-                    string $directory
-                ) : DefaultFinder {
-                    if (true === is_file($directory)) {
-                        return $finder->append([$directory]);
-                    }
+                $inDirs,
+                (
+                    function (
+                        DefaultFinder $finder,
+                        string $directory
+                    ) : DefaultFinder {
+                        if (true === is_file($directory)) {
+                            return $finder->append([$directory]);
+                        }
 
-                    return $finder->in($directory);
-                }
-            ),
+                        return $finder->in($directory);
+                    }
+                ),
                 $finder
             )->getIterator() as $finder_faff
         ) {
