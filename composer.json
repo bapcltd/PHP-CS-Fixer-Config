@@ -21,7 +21,7 @@
         "tests": [
             "composer install",
             "php ./vendor/friendsofphp/php-cs-fixer/php-cs-fixer fix --verbose --allow-risky=yes --dry-run",
-            "php ./vendor/phpstan/phpstan/bin/phpstan analyse -l7 .php_cs.dist src",
+            "php ./vendor/phpstan/phpstan/bin/phpstan analyse -c ./phpstan.neon .php_cs.dist src",
             "php ./vendor/vimeo/psalm/bin/psalm"
         ]
     },
