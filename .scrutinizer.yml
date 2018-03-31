@@ -6,3 +6,7 @@ build:
         php71:
             environment:
                 php: 7.1
+        analysis:
+            tests:
+                override:
+                    - php-scrutinizer-run
