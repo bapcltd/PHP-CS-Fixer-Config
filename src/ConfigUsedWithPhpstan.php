@@ -10,9 +10,6 @@ namespace SignpostMarv\CS;
 
 class ConfigUsedWithPhpstan extends Config
 {
-    /**
-    * {@inheritdoc}
-    */
     protected static function RuntimeResolveRules() : array
     {
         $rules = parent::RuntimeResolveRules();
