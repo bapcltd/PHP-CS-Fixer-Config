@@ -6,7 +6,17 @@ build:
         php71:
             environment:
                 php: 7.1
+        php72:
+            environment:
+                php: 7.2
         analysis:
+            project_setup:
+                override: true
             tests:
                 override:
                     - php-scrutinizer-run
+
+checks:
+    php:
+        code_rating: true
+        duplication: true
