@@ -13,7 +13,7 @@ class ConfigUsedWithPhpstan extends Config
     protected static function RuntimeResolveRules() : array
     {
         $rules = parent::RuntimeResolveRules();
-        $rules['phpdoc_var_without_name'] = false;
+        $rules['phpdoc_to_comment'] = false;
 
         return $rules;
     }
