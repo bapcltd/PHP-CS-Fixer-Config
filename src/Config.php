@@ -120,7 +120,7 @@ class Config extends BaseConfig
                 $finder
             )->getIterator() as $finder_faff
         ) {
-                $faffing[] = $finder_faff;
+            $faffing[] = $finder_faff;
         }
 
         $this->setFinder($faffing);
