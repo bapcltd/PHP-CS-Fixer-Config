@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <psalm
     name="Example Psalm config with recommended defaults"
-    stopOnFirstError="false"
     useDocblockTypes="true"
     totallyTyped="true"
+    errorBaseline="./psalm.baseline.xml"
 >
     <projectFiles>
         <file name=".php_cs.dist" />
@@ -11,6 +11,5 @@
     </projectFiles>
 
     <issueHandlers>
-        <UnusedClass errorLevel="info" />
     </issueHandlers>
 </psalm>

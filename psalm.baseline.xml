@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<files>
+  <file src="src\ConfigUsedWithPhpstanWithoutNullableReturn.php">
+    <UnusedClass occurrences="1">
+      <code>class ConfigUsedWithPhpstanWithoutNullableReturn extends Config</code>
+    </UnusedClass>
+  </file>
+  <file src="src\ConfigUsedWithoutNullableReturn.php">
+    <UnusedClass occurrences="1">
+      <code>class ConfigUsedWithoutNullableReturn extends Config</code>
+    </UnusedClass>
+  </file>
+</files>

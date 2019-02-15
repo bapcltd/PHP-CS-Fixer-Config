@@ -1,17 +1,17 @@
 build:
     nodes:
-        php70:
-            environment:
-                php: 7.0
-        php708:
-            environment:
-                php: 7.0.8
         php71:
             environment:
                 php: 7.1
+        php713:
+            environment:
+                php: 7.1.3
         php72:
             environment:
                 php: 7.2
+        php73:
+            environment:
+                php: 7.3
         analysis:
             project_setup:
                 override: true

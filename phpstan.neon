@@ -1,3 +1,7 @@
 includes:
     - ./vendor/phpstan/phpstan/conf/config.levelmax.neon
     - ./vendor/phpstan/phpstan-strict-rules/rules.neon
+
+parameters:
+    ignoreErrors:
+        - "/^Parameter #1 \\$finder of method PhpCsFixer\\\\Config::setFinder\\(\\) expects iterable<string>, array<int, Symfony\\\\Component\\\\Finder\\\\SplFileInfo> given\\.$/"
