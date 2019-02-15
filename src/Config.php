@@ -10,7 +10,6 @@ namespace SignpostMarv\CS;
 
 use PhpCsFixer\Config as BaseConfig;
 use PhpCsFixer\Finder as DefaultFinder;
-use SplFileInfo;
 
 class Config extends BaseConfig
 {
@@ -95,7 +94,7 @@ class Config extends BaseConfig
         $this->setRules(static::RuntimeResolveRules());
 
         /**
-        * @var DefaultFinder $finder
+        * @var DefaultFinder
         */
         $finder = new DefaultFinder();
         $finder->ignoreUnreadableDirs();
