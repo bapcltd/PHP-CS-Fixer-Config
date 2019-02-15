@@ -120,11 +120,7 @@ class Config extends BaseConfig
                 $finder
             )->getIterator() as $finder_faff
         ) {
-            if ( ! ($finder_faff instanceof SplFileInfo)) {
-                $faffing[] = new SplFileInfo($finder_faff);
-            } else {
                 $faffing[] = $finder_faff;
-            }
         }
 
         $this->setFinder($faffing);
