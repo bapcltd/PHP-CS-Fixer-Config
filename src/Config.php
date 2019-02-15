@@ -125,19 +125,6 @@ class Config extends BaseConfig
         $this->setFinder($faffing);
     }
 
-    /**
-    * {@inheritdoc}
-    */
-    public static function createWithDirs(string ...$dirs) : self
-    {
-        return new static(
-            array_filter(
-                $dirs,
-                'is_dir'
-            )
-        );
-    }
-
     public static function createWithPaths(string ...$pathsIn) : self
     {
         $paths = [];

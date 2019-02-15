@@ -11,5 +11,6 @@
     </projectFiles>
 
     <issueHandlers>
+        <UnusedClass errorLevel="info" />
     </issueHandlers>
 </psalm>

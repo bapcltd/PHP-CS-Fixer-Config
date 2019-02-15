@@ -20,7 +20,7 @@
     "scripts": {
         "tests": [
             "phpstan analyse -c ./phpstan.neon .php_cs.dist src",
-            "psalm",
+            "psalm --find-dead-code",
             "phpcpd src",
             "phpmnd src",
             "php-cs-fixer fix --verbose --allow-risky=yes --dry-run",

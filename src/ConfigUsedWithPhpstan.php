@@ -10,6 +10,9 @@ namespace SignpostMarv\CS;
 
 class ConfigUsedWithPhpstan extends Config
 {
+    /**
+    * @psalm-suppress UnusedMethod
+    */
     protected static function RuntimeResolveRules() : array
     {
         $rules = parent::RuntimeResolveRules();
