@@ -8,7 +8,7 @@ declare(strict_types=1);
 
 namespace SignpostMarv\CS;
 
-class ConfigUsedWithPhpstanWithoutNullableReturn extends Config
+class ConfigUsedWithStaticAnalysisWithoutNullableReturn extends Config
 {
     protected static function RuntimeResolveRules() : array
     {

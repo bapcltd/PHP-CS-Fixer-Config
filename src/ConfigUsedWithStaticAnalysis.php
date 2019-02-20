@@ -8,7 +8,7 @@ declare(strict_types=1);
 
 namespace SignpostMarv\CS;
 
-class ConfigUsedWithPhpstan extends Config
+class ConfigUsedWithStaticAnalysis extends Config
 {
     /**
     * @psalm-suppress UnusedMethod

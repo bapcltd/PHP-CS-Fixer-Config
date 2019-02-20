@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <files>
-  <file src="src\ConfigUsedWithPhpstanWithoutNullableReturn.php">
+  <file src="src\ConfigUsedWithStaticAnalysisWithoutNullableReturn.php">
     <UnusedClass occurrences="1">
-      <code>class ConfigUsedWithPhpstanWithoutNullableReturn extends Config</code>
+      <code>class ConfigUsedWithStaticAnalysisWithoutNullableReturn extends Config</code>
     </UnusedClass>
   </file>
   <file src="src\ConfigUsedWithoutNullableReturn.php">
