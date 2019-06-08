@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<files>
+<files psalm-version="3.4.2@f327d75116a15e88431668c36b9613f1e3dd62a4">
   <file src="src\ConfigUsedWithStaticAnalysisWithoutNullableReturn.php">
     <UnusedClass occurrences="1">
-      <code>class ConfigUsedWithStaticAnalysisWithoutNullableReturn extends Config</code>
+      <code>ConfigUsedWithStaticAnalysisWithoutNullableReturn</code>
     </UnusedClass>
   </file>
   <file src="src\ConfigUsedWithoutNullableReturn.php">
     <UnusedClass occurrences="1">
-      <code>class ConfigUsedWithoutNullableReturn extends Config</code>
+      <code>ConfigUsedWithoutNullableReturn</code>
     </UnusedClass>
   </file>
 </files>
