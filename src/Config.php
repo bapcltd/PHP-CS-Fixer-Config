@@ -97,6 +97,7 @@ class Config extends BaseConfig
 		$this->setUsingCache(true);
 		$this->setRules(static::RuntimeResolveRules());
 		$this->setIndent("\t");
+		$this->setLineEnding("\n");
 
 		/**
 		* @var DefaultFinder
