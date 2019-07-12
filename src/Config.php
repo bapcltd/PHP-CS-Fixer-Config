@@ -96,6 +96,7 @@ class Config extends BaseConfig
         $this->setRiskyAllowed(true);
         $this->setUsingCache(true);
         $this->setRules(static::RuntimeResolveRules());
+        $this->setIndent("\t");
 
         /**
         * @var DefaultFinder
