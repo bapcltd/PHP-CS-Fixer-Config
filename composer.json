@@ -19,7 +19,7 @@
     },
     "scripts": {
         "tests": [
-            "psalm --find-dead-code",
+            "psalm --show-info=false --shepherd",
             "phpcpd src",
             "phpmnd src",
             "php-cs-fixer fix --verbose --allow-risky=yes --dry-run",

@@ -3,6 +3,7 @@
     name="Example Psalm config with recommended defaults"
     useDocblockTypes="true"
     totallyTyped="true"
+    findUnusedCode="true"
     errorBaseline="./psalm.baseline.xml"
 >
     <projectFiles>
