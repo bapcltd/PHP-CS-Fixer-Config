@@ -10,15 +10,15 @@ that use [phpstan](https://github.com/phpstan/phpstan) for static analysis
 
 1. `composer require --dev signpostmarv/php-cs-fixer-config`
 1. create your `.php_cs` or `.php_cs.dist` file and enter the corresponding
-    code for the config you wish to use
+	code for the config you wish to use
 
 ### General Use
 
 ```php
 return \SignpostMarv\CS\Config::createWithPaths(
-    __FILE__,
-    (__DIR__ . DIRECTORY_SEPARATOR . 'src' . DIRECTORY_SEPARATOR),
-    (__DIR__ . DIRECTORY_SEPARATOR . 'tests' . DIRECTORY_SEPARATOR)
+	__FILE__,
+	(__DIR__ . DIRECTORY_SEPARATOR . 'src' . DIRECTORY_SEPARATOR),
+	(__DIR__ . DIRECTORY_SEPARATOR . 'tests' . DIRECTORY_SEPARATOR)
 )
 ```
 
@@ -26,9 +26,9 @@ return \SignpostMarv\CS\Config::createWithPaths(
 
 ```php
 return \SignpostMarv\CS\ConfigUsedWithoutNullableReturn::createWithPaths(
-    __FILE__,
-    (__DIR__ . DIRECTORY_SEPARATOR . 'src' . DIRECTORY_SEPARATOR),
-    (__DIR__ . DIRECTORY_SEPARATOR . 'tests' . DIRECTORY_SEPARATOR)
+	__FILE__,
+	(__DIR__ . DIRECTORY_SEPARATOR . 'src' . DIRECTORY_SEPARATOR),
+	(__DIR__ . DIRECTORY_SEPARATOR . 'tests' . DIRECTORY_SEPARATOR)
 )
 ```
 
@@ -36,9 +36,9 @@ return \SignpostMarv\CS\ConfigUsedWithoutNullableReturn::createWithPaths(
 
 ```php
 return \SignpostMarv\CS\ConfigUsedWithPhpstan::createWithPaths(
-    __FILE__,
-    (__DIR__ . DIRECTORY_SEPARATOR . 'src' . DIRECTORY_SEPARATOR),
-    (__DIR__ . DIRECTORY_SEPARATOR . 'tests' . DIRECTORY_SEPARATOR)
+	__FILE__,
+	(__DIR__ . DIRECTORY_SEPARATOR . 'src' . DIRECTORY_SEPARATOR),
+	(__DIR__ . DIRECTORY_SEPARATOR . 'tests' . DIRECTORY_SEPARATOR)
 )
 ```
 
@@ -46,9 +46,9 @@ return \SignpostMarv\CS\ConfigUsedWithPhpstan::createWithPaths(
 
 ```php
 return \SignpostMarv\CS\ConfigUsedWithPhpstanWithoutNullableReturn::createWithPaths(
-    __FILE__,
-    (__DIR__ . DIRECTORY_SEPARATOR . 'src' . DIRECTORY_SEPARATOR),
-    (__DIR__ . DIRECTORY_SEPARATOR . 'tests' . DIRECTORY_SEPARATOR)
+	__FILE__,
+	(__DIR__ . DIRECTORY_SEPARATOR . 'src' . DIRECTORY_SEPARATOR),
+	(__DIR__ . DIRECTORY_SEPARATOR . 'tests' . DIRECTORY_SEPARATOR)
 )
 ```
 
@@ -56,6 +56,6 @@ return \SignpostMarv\CS\ConfigUsedWithPhpstanWithoutNullableReturn::createWithPa
 
 1. Extend `SignpostMarv\CS\Config`
 1. Either
-    * override the `SignpostMarv\CS\Config::DEFAULT_RULES` array const
-    * override the `SignpostMarv\CS\Config::RuntimeResolveRules()` static
-        method as in [ConfigUsedWithPhpstan](https://github.com/SignpostMarv/PHP-CS-Fixer-Config/blob/master/src/ConfigUsedWithPhpstan.php)
+	* override the `SignpostMarv\CS\Config::DEFAULT_RULES` array const
+	* override the `SignpostMarv\CS\Config::RuntimeResolveRules()` static
+		method as in [ConfigUsedWithPhpstan](https://github.com/SignpostMarv/PHP-CS-Fixer-Config/blob/master/src/ConfigUsedWithPhpstan.php)

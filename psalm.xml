@@ -1,16 +1,16 @@
 <?xml version="1.0"?>
 <psalm
-    name="Example Psalm config with recommended defaults"
-    useDocblockTypes="true"
-    totallyTyped="true"
-    findUnusedCode="true"
-    errorBaseline="./psalm.baseline.xml"
+	name="Example Psalm config with recommended defaults"
+	useDocblockTypes="true"
+	totallyTyped="true"
+	findUnusedCode="true"
+	errorBaseline="./psalm.baseline.xml"
 >
-    <projectFiles>
-        <file name=".php_cs.dist" />
-        <directory name="src" />
-    </projectFiles>
+	<projectFiles>
+		<file name=".php_cs.dist" />
+		<directory name="src" />
+	</projectFiles>
 
-    <issueHandlers>
-    </issueHandlers>
+	<issueHandlers>
+	</issueHandlers>
 </psalm>

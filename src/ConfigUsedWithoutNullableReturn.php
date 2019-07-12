@@ -10,11 +10,11 @@ namespace SignpostMarv\CS;
 
 class ConfigUsedWithoutNullableReturn extends Config
 {
-    protected static function RuntimeResolveRules() : array
-    {
-        $rules = parent::RuntimeResolveRules();
-        $rules['simplified_null_return'] = false;
+	protected static function RuntimeResolveRules() : array
+	{
+		$rules = parent::RuntimeResolveRules();
+		$rules['simplified_null_return'] = false;
 
-        return $rules;
-    }
+		return $rules;
+	}
 }
