@@ -1,10 +1,9 @@
 # SignpostMarv's PHP-CS-Fixer config
 
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/SignpostMarv/PHP-CS-Fixer-Config/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/SignpostMarv/PHP-CS-Fixer-Config/?branch=master)
-[![Build Status](https://scrutinizer-ci.com/g/SignpostMarv/psalm/badges/build.png?b=master)](https://scrutinizer-ci.com/g/SignpostMarv/psalm/build-status/master)
+[![Build Status](https://travis-ci.org/SignpostMarv/PHP-CS-Fixer-Config.svg?branch=master)](https://travis-ci.org/SignpostMarv/PHP-CS-Fixer-Config)
+[![Psalm Type Coverage](https://shepherd.dev/github/SignpostMarv/PHP-CS-Fixer-Config/coverage.svg)](https://shepherd.dev/github/SignpostMarv/PHP-CS-Fixer-Config)
 
-There's two different versions, one for general use & one for use on projects
-that use [phpstan](https://github.com/phpstan/phpstan) for static analysis
+There's two different versions, one for general use & one for use on projects that use static analysis.
 
 ## Installation & Usage
 
@@ -15,41 +14,41 @@ that use [phpstan](https://github.com/phpstan/phpstan) for static analysis
 ### General Use
 
 ```php
-return \SignpostMarv\CS\Config::createWithPaths(
+return \SignpostMarv\CS\Config::createWithPaths(...[
 	__FILE__,
-	(__DIR__ . DIRECTORY_SEPARATOR . 'src' . DIRECTORY_SEPARATOR),
-	(__DIR__ . DIRECTORY_SEPARATOR . 'tests' . DIRECTORY_SEPARATOR)
-)
+	(__DIR__ . '/src/'),
+	(__DIR__ . '/tests/'),
+])
 ```
 
 #### Use without PHP 7.1 Nullable return types
 
 ```php
-return \SignpostMarv\CS\ConfigUsedWithoutNullableReturn::createWithPaths(
+return \SignpostMarv\CS\ConfigUsedWithoutNullableReturn::createWithPaths(...[
 	__FILE__,
-	(__DIR__ . DIRECTORY_SEPARATOR . 'src' . DIRECTORY_SEPARATOR),
-	(__DIR__ . DIRECTORY_SEPARATOR . 'tests' . DIRECTORY_SEPARATOR)
-)
+	(__DIR__ . '/src/'),
+	(__DIR__ . '/tests/'),
+])
 ```
 
-### With PHPStan
+### With Static Analysis
 
 ```php
-return \SignpostMarv\CS\ConfigUsedWithPhpstan::createWithPaths(
+return \SignpostMarv\CS\ConfigUsedWithStaticAnalysis::createWithPaths(...[
 	__FILE__,
-	(__DIR__ . DIRECTORY_SEPARATOR . 'src' . DIRECTORY_SEPARATOR),
-	(__DIR__ . DIRECTORY_SEPARATOR . 'tests' . DIRECTORY_SEPARATOR)
-)
+	(__DIR__ . '/src/'),
+	(__DIR__ . '/tests/'),
+])
 ```
 
 #### Use without PHP 7.1 Nullable return types
 
 ```php
-return \SignpostMarv\CS\ConfigUsedWithPhpstanWithoutNullableReturn::createWithPaths(
+return \SignpostMarv\CS\ConfigUsedWithStaticAnalysisWithoutNullableReturn::createWithPaths(...[
 	__FILE__,
-	(__DIR__ . DIRECTORY_SEPARATOR . 'src' . DIRECTORY_SEPARATOR),
-	(__DIR__ . DIRECTORY_SEPARATOR . 'tests' . DIRECTORY_SEPARATOR)
-)
+	(__DIR__ . '/src/'),
+	(__DIR__ . '/tests/'),
+])
 ```
 
 ### Customising Rules
@@ -58,4 +57,4 @@ return \SignpostMarv\CS\ConfigUsedWithPhpstanWithoutNullableReturn::createWithPa
 1. Either
 	* override the `SignpostMarv\CS\Config::DEFAULT_RULES` array const
 	* override the `SignpostMarv\CS\Config::RuntimeResolveRules()` static
-		method as in [ConfigUsedWithPhpstan](https://github.com/SignpostMarv/PHP-CS-Fixer-Config/blob/master/src/ConfigUsedWithPhpstan.php)
+		method as in [ConfigUsedWithStaticAnalysis](https://github.com/SignpostMarv/PHP-CS-Fixer-Config/blob/master/src/ConfigUsedWithStaticAnalysis.php)
