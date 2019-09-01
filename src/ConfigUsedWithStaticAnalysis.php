@@ -10,9 +10,6 @@ namespace SignpostMarv\CS;
 
 class ConfigUsedWithStaticAnalysis extends Config
 {
-	/**
-	* @psalm-suppress UnusedMethod
-	*/
 	protected static function RuntimeResolveRules() : array
 	{
 		$rules = parent::RuntimeResolveRules();

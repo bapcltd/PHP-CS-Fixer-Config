@@ -77,9 +77,6 @@ class Config extends BaseConfig
 		'ternary_to_null_coalescing' => true,
 	];
 
-	/**
-	* {@inheritdoc}
-	*/
 	public function __construct(array $inDirs)
 	{
 		parent::__construct(
@@ -99,9 +96,6 @@ class Config extends BaseConfig
 		$this->setIndent("\t");
 		$this->setLineEnding("\n");
 
-		/**
-		* @var DefaultFinder
-		*/
 		$finder = new DefaultFinder();
 		$finder->ignoreUnreadableDirs();
 
