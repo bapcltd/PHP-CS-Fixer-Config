@@ -131,16 +131,11 @@ class Config extends BaseConfig
 		$this->setFinder($faffing);
 	}
 
-	public static function createWithPaths(string ...$pathsIn) : self
+	public static function createWithPaths(string ...$paths) : self
 	{
-		$paths = [];
-		foreach ($pathsIn as $path) {
-			if (is_dir($path) || is_file($path)) {
-				$paths[] = $path;
-			}
-		}
-
-		return new static($paths);
+		return new static(array_filter($paths, function (string $path) : bool {
+			return is_dir($path) || is_file($path);
+		}));
 	}
 
 	/**
