@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<files psalm-version="3.4.2@f327d75116a15e88431668c36b9613f1e3dd62a4">
-  <file src="src\ConfigUsedWithStaticAnalysisWithoutNullableReturn.php">
+<files psalm-version="3.4.12@86e5e50c1bb492045e70f2ebe1da3cad06e4e9b2">
+  <file src="src/ConfigUsedWithStaticAnalysisWithoutNullableReturn.php">
     <UnusedClass occurrences="1">
       <code>ConfigUsedWithStaticAnalysisWithoutNullableReturn</code>
     </UnusedClass>
   </file>
-  <file src="src\ConfigUsedWithoutNullableReturn.php">
+  <file src="src/ConfigUsedWithoutNullableReturn.php">
     <UnusedClass occurrences="1">
       <code>ConfigUsedWithoutNullableReturn</code>
     </UnusedClass>
