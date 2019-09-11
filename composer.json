@@ -17,6 +17,9 @@
 		"optimize-autoloader": true,
 		"sort-packages": true
 	},
+	"conflict": {
+		"vimeo/psalm": "<3.5.1"
+	},
 	"scripts": {
 		"tests": [
 			"psalm --show-info=false --shepherd",
@@ -35,6 +38,6 @@
 		"povils/phpmnd": "^2.1",
 		"roave/security-advisories": "dev-master",
 		"sebastian/phpcpd": "^4.1",
-		"vimeo/psalm": "^3.4"
+		"vimeo/psalm": "^3.5"
 	}
 }
