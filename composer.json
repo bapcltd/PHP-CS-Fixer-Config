@@ -25,13 +25,13 @@
 			"psalm --show-info=false --shepherd",
 			"phpcpd src",
 			"phpmnd src",
-			"php-cs-fixer fix --verbose --allow-risky=yes --dry-run",
+			"php-cs-fixer fix --verbose --allow-risky=yes --dry-run --diff-format=udiff",
 			"composer-require-checker check ./composer.json"
 		]
 	},
 	"require": {
 		"php": "^7.1,>=7.1.3",
-		"friendsofphp/php-cs-fixer": "^2.15"
+		"friendsofphp/php-cs-fixer": "^2.16"
 	},
 	"require-dev": {
 		"maglnet/composer-require-checker": "^2.0",

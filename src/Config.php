@@ -72,6 +72,7 @@ class Config extends BaseConfig
 		],
 		'semicolon_after_instruction' => true,
 		'simplified_null_return' => true,
+		'single_line_throw' => false,
 		'strict_comparison' => true,
 		'strict_param' => true,
 		'ternary_to_null_coalescing' => true,
