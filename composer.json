@@ -18,7 +18,7 @@
 		"sort-packages": true
 	},
 	"conflict": {
-		"vimeo/psalm": "<3.5.1"
+		"vimeo/psalm": "<3.8"
 	},
 	"scripts": {
 		"tests": [
@@ -38,6 +38,6 @@
 		"povils/phpmnd": "^2.1",
 		"roave/security-advisories": "dev-master",
 		"sebastian/phpcpd": "^4.1",
-		"vimeo/psalm": "^3.5"
+		"vimeo/psalm": "^3.8"
 	}
 }
