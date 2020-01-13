@@ -144,7 +144,7 @@ class Config extends BaseConfig
 			array_reduce(
 				$inDirs,
 				(
-					function (
+					static function (
 						DefaultFinder $finder,
 						string $directory
 					) : DefaultFinder {
@@ -166,7 +166,7 @@ class Config extends BaseConfig
 
 	public static function createWithPaths(string ...$paths) : self
 	{
-		return new static(array_filter($paths, function (string $path) : bool {
+		return new static(array_filter($paths, static function (string $path) : bool {
 			return is_dir($path) || is_file($path);
 		}));
 	}
