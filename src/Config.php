@@ -87,9 +87,7 @@ class Config extends BaseConfig
 		'php_unit_test_case_static_method_calls' => true,
 		'php_unit_test_class_requires_covers' => false,
 		'phpdoc_add_missing_param_annotation' => true,
-		'phpdoc_align' => [
-			'align' => 'left',
-		],
+		'phpdoc_align' => false,
 		'phpdoc_indent' => false,
 		'phpdoc_no_alias_tag' => [
 			'type' => 'var',
