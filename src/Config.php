@@ -175,8 +175,8 @@ class Config extends BaseConfig
 	}
 
 	/**
-	* Resolve rules at runtime.
-	*/
+	 * Resolve rules at runtime.
+	 */
 	protected static function RuntimeResolveRules() : array
 	{
 		return (array) static::DEFAULT_RULES;
