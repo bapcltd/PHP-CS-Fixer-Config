@@ -88,7 +88,7 @@ class Config extends BaseConfig
 		'php_unit_test_class_requires_covers' => false,
 		'phpdoc_add_missing_param_annotation' => true,
 		'phpdoc_align' => false,
-		'phpdoc_indent' => false,
+		'phpdoc_indent' => true,
 		'phpdoc_no_alias_tag' => [
 			'type' => 'var',
 			'link' => 'see',
