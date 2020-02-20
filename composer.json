@@ -23,6 +23,9 @@
 	"scripts": {
 		"tests": [
 			"psalm --show-info=false --shepherd",
+			"@static-analysis"
+		],
+		"static-analysis": [
 			"phpcpd src",
 			"phpmnd src",
 			"php-cs-fixer fix --verbose --allow-risky=yes --dry-run --diff-format=udiff",

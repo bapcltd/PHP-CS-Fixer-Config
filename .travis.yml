@@ -5,6 +5,11 @@ php:
   - 7.4.1
   - 7.4.2
   - 7.4
+matrix:
+  include:
+    - php: 7.4
+      env:
+        - psalm=yes
 cache:
   files:
     - ./.php_cs.cache
@@ -16,6 +21,7 @@ before_script:
 install:
   - travis_retry composer install --no-interaction --no-suggest --prefer-source
 script:
-  - composer run tests
+  - if [[ "$psalm" = "yes" ]]; then ./vendor/bin/psalm --shepherd --show-info=false --diff --diff-methods; fi
+  - if [[ "$psalm" != "yes" ]]; then composer run static-analysis; fi
 matrix:
   fast_finish: true
