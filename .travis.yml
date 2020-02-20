@@ -8,6 +8,8 @@ cache:
     - ./.php_cs.cache
   directories:
     - ./vendor/
+before_script:
+  - phpenv config-rm xdebug.ini
 install:
   - travis_retry composer install --no-interaction --no-suggest --prefer-source
 script:
