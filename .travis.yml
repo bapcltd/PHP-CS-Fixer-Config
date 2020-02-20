@@ -27,5 +27,3 @@ install:
 script:
   - if [[ "$psalm" = "yes" ]]; then ./vendor/bin/psalm --shepherd --show-info=false --diff --diff-methods; fi
   - if [[ "$psalm" != "yes" ]]; then composer run static-analysis; fi
-matrix:
-  fast_finish: true
