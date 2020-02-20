@@ -9,7 +9,8 @@ cache:
   files:
     - ./.php_cs.cache
   directories:
-    - ./vendor/
+    - $HOME/.composer/cache
+    - ./psalm/cache
 before_script:
   - phpenv config-rm xdebug.ini
 install:
