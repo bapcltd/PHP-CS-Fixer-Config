@@ -10,6 +10,7 @@ matrix:
     - php: 7.4
       env:
         - psalm=yes
+  fast_finish: true
 cache:
   files:
     - ./.php_cs.cache
