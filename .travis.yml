@@ -8,6 +8,9 @@ matrix:
   include:
     - php: 7.4
       env:
+        - psalm=no
+    - php: 7.4
+      env:
         - psalm=yes
   fast_finish: true
 cache:
