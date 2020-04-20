@@ -21,6 +21,7 @@ before_script:
   - phpenv config-rm xdebug.ini
 install:
   - travis_retry composer install --no-interaction --no-suggest --prefer-source
+  - if [[ "$psalm" != "yes" ]]; then composer update --dry-run roave/security-advisories; fi
 script:
   - if [[ "$psalm" = "yes" ]]; then ./vendor/bin/psalm --shepherd --show-info=false --diff --diff-methods; fi
   - if [[ "$psalm" != "yes" ]]; then composer run static-analysis; fi
