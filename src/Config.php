@@ -8,8 +8,14 @@ declare(strict_types=1);
 
 namespace SignpostMarv\CS;
 
+use function array_filter;
+use function array_reduce;
+use function is_dir;
+use function is_file;
 use PhpCsFixer\Config as BaseConfig;
 use PhpCsFixer\Finder as DefaultFinder;
+use function preg_replace;
+use function str_replace;
 
 class Config extends BaseConfig
 {
