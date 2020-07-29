@@ -55,6 +55,8 @@ class Config extends BaseConfig
 		'logical_operators' => true,
 		'mb_str_functions' => true,
 		'modernize_types_casting' => true,
+		'native_constant_invocation' => true,
+		'native_function_invocation' => true,
 		'no_alias_functions' => true,
 		'no_multiline_whitespace_before_semicolons' => true,
 		'no_php4_constructor' => true,
