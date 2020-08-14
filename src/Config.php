@@ -18,6 +18,71 @@ use str_replace;
 
 class Config extends BaseConfig
 {
+	public function __construct(array $inDirs)
+	{
+		parent::__construct(
+			str_replace(
+				'\\',
+				' - ',
+				(string) preg_replace(
+					'/([a-z0-9])([A-Z])/',
+					'$1 $2',
+					static::class
+				)
+			)
+		);
+		$this->setRiskyAllowed(true);
+		$this->setUsingCache(true);
+		$this->setRules(static::RuntimeResolveRules());
+		$this->setIndent("\t");
+		$this->setLineEnding("\n");
+
+		$finder = new DefaultFinder();
+		$finder->ignoreUnreadableDirs();
+
+		$faffing = [];
+
+		foreach (
+			array_reduce(
+				$inDirs,
+				(
+					/**
+					 * @param string $directory
+					 *
+					 * @return DefaultFinder
+					 */
+					static function (
+						DefaultFinder $finder,
+						$directory
+					) {
+						if (true === is_file($directory)) {
+							return $finder->append([$directory]);
+						}
+
+						return $finder->in($directory);
+					}
+				),
+				$finder
+			)->getIterator() as $finder_faff
+		) {
+			$faffing[] = $finder_faff;
+		}
+
+		$this->setFinder($faffing);
+	}
+
+	/**
+	 * @param string ...$paths
+	 */
+	public static function createWithPaths()
+	{
+		$paths = func_get_args();
+
+		return new static(array_filter($paths, static function ($path) {
+			return is_dir($path) || is_file($path);
+		}));
+	}
+
 	protected static function DefaultRules()
 	{
 		return [
@@ -181,71 +246,6 @@ class Config extends BaseConfig
 		'strict_param' => true,
 		'ternary_to_null_coalescing' => true,
 	];
-	}
-
-	public function __construct(array $inDirs)
-	{
-		parent::__construct(
-			str_replace(
-				'\\',
-				' - ',
-				(string) preg_replace(
-					'/([a-z0-9])([A-Z])/',
-					'$1 $2',
-					static::class
-				)
-			)
-		);
-		$this->setRiskyAllowed(true);
-		$this->setUsingCache(true);
-		$this->setRules(static::RuntimeResolveRules());
-		$this->setIndent("\t");
-		$this->setLineEnding("\n");
-
-		$finder = new DefaultFinder();
-		$finder->ignoreUnreadableDirs();
-
-		$faffing = [];
-
-		foreach (
-			array_reduce(
-				$inDirs,
-				(
-					/**
-					 * @param string $directory
-					 *
-					 * @return DefaultFinder
-					 */
-					static function (
-						DefaultFinder $finder,
-						$directory
-					) {
-						if (true === is_file($directory)) {
-							return $finder->append([$directory]);
-						}
-
-						return $finder->in($directory);
-					}
-				),
-				$finder
-			)->getIterator() as $finder_faff
-		) {
-			$faffing[] = $finder_faff;
-		}
-
-		$this->setFinder($faffing);
-	}
-
-	/**
-	 * @param string ...$paths
-	 */
-	public static function createWithPaths()
-	{
-		$paths = func_get_args();
-
-		return new static(array_filter($paths, static function ($path) {
-			return is_dir($path) || is_file($path);
-		}));
 	}
 
 	/**
