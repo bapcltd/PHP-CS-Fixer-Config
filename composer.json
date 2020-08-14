@@ -1,46 +1,17 @@
 {
-	"name": "signpostmarv/php-cs-fixer-config",
+	"name": "bapcltd/php-cs-fixer-config",
 	"description": "PHP-CS-Fixer Config",
 	"license": "ISC",
-	"authors": [
-		{
-			"name": "SignpostMarv",
-			"email": "me@signpostmarv.name"
-		}
-	],
-	"autoload": {
-		"psr-4": {
-			"SignpostMarv\\CS\\": "src/"
-		}
-	},
 	"config": {
 		"optimize-autoloader": true,
 		"sort-packages": true
 	},
-	"conflict": {
-		"vimeo/psalm": "<3.11.2"
-	},
-	"scripts": {
-		"tests": [
-			"psalm --show-info=false --shepherd",
-			"@static-analysis"
-		],
-		"static-analysis": [
-			"phpcpd src",
-			"phpmnd src",
-			"php-cs-fixer fix --verbose --allow-risky=yes --dry-run --diff-format=udiff",
-			"composer-require-checker check ./composer.json"
-		]
-	},
 	"require": {
 		"php": "^7.4",
-		"friendsofphp/php-cs-fixer": "^2.16"
+		"signpostmarv/php-cs-fixer-config": "^0.18.0"
 	},
 	"require-dev": {
-		"maglnet/composer-require-checker": "^2.0",
 		"povils/phpmnd": "^2.2",
-		"roave/security-advisories": "dev-master",
-		"sebastian/phpcpd": "^5.0",
-		"vimeo/psalm": "^3.11"
+		"roave/security-advisories": "dev-master"
 	}
 }
