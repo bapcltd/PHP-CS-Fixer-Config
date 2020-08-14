@@ -4,13 +4,12 @@
 *
 * @author SignpostMarv
 */
-declare(strict_types=1);
 
 namespace SignpostMarv\CS;
 
 class ConfigUsedWithStaticAnalysisWithoutNullableReturn extends Config
 {
-	protected static function RuntimeResolveRules() : array
+	protected static function RuntimeResolveRules()
 	{
 		$rules = parent::RuntimeResolveRules();
 		$rules['phpdoc_to_comment'] = false;

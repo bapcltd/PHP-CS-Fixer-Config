@@ -4,13 +4,12 @@
 *
 * @author SignpostMarv
 */
-declare(strict_types=1);
 
-namespace SignpostMarv\CS;
+namespace BAPC\CS;
 
 class ConfigUsedWithoutNullableReturn extends Config
 {
-	protected static function RuntimeResolveRules() : array
+	protected static function RuntimeResolveRules()
 	{
 		$rules = parent::RuntimeResolveRules();
 		$rules['simplified_null_return'] = false;

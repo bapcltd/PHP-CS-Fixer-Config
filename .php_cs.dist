@@ -4,12 +4,10 @@
 *
 * @author SignpostMarv
 */
-declare(strict_types=1);
 
-namespace SignpostMarv\CS;
+namespace BAPC\CS;
 
-return ConfigUsedWithStaticAnalysis::createWithPaths(...[
-	__FILE__,
+return ConfigUsedWithStaticAnalysis::createWithPaths(
 	(__DIR__ . '/src/'),
-	(__DIR__ . '/tests/'),
-]);
+	__FILE__
+);
