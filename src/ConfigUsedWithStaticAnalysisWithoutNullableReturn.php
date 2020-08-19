@@ -5,7 +5,7 @@
 * @author SignpostMarv
 */
 
-namespace SignpostMarv\CS;
+namespace BAPC\CS;
 
 class ConfigUsedWithStaticAnalysisWithoutNullableReturn extends Config
 {
