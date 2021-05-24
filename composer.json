@@ -8,7 +8,7 @@
 	},
 	"require": {
 		"php": "^7.4",
-		"signpostmarv/php-cs-fixer-config": "0.18.0"
+		"signpostmarv/php-cs-fixer-config": "^0.21.0"
 	},
 	"require-dev": {
 		"povils/phpmnd": "^2.2",
