@@ -8,7 +8,7 @@
 	},
 	"require": {
 		"php": "^7.4",
-		"signpostmarv/php-cs-fixer-config": "^0.21.0"
+		"signpostmarv/php-cs-fixer-config": "^0.21.1"
 	},
 	"require-dev": {
 		"roave/security-advisories": "dev-master"
