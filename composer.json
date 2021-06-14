@@ -7,7 +7,7 @@
 		"sort-packages": true
 	},
 	"require": {
-		"php": "^7.4",
+		"php": "^7.4|^8.0",
 		"signpostmarv/php-cs-fixer-config": "^0.21.1"
 	},
 	"require-dev": {
